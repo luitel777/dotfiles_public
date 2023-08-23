@@ -1,0 +1,45 @@
+# Just for reference
+# https://github.com/helix-editor/helix/blob/master/languages.toml
+
+
+# https://www.kernel.org/doc/html/v4.10/process/coding-style.html 
+# if you need more than 3 levels of indentation, you’re screwed anyway, and should fix your program. 
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 2, unit = "  " }
+auto-format = false
+file-types = ["cc", "hh", "c++", "cpp", "hpp", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino", "cu", "cuh", "cppm"]
+
+[[language]]
+name = "c"
+indent = { tab-width = 8, unit = "        " }
+auto-format = false
+file-types = ["h", "C", "H", "c"]
+
+[[language]]
+name = "nasm"
+indent = { tab-width = 8, unit = "        " }
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "^typ(st)?$"
+file-types = ["typ"]
+comment-token = "//"
+roots = []
+language-servers = ["typst-lsp"]
+indent = { tab-width = 4, unit = "    "}
+
+[language-server]
+typst-lsp = { command = "typst-lsp", args = [] }
+clangd = { args = ["--header-insertion=never"]}
+
+[[language]]
+name = "make"
+scope = "source.make"
+file-types = ["Makefile", "makefile", "make", "mk", "GNUmakefile"]
+injection-regex = "(make|makefile|Makefile|mk|GNUmakefile)"
+roots = []
+comment-token = "#"
+indent = { tab-width = 4, unit = "\t" }

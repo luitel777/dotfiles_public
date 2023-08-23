@@ -1,0 +1,16 @@
+#!/bin/sh
+# this program takes a filepath and creates a sumbolic link in .cache/boxmark
+F=`readlink -f "$1"`
+
+if [ ! -d $HOME/.cache/boxmark ]
+then
+  echo "first time, creating box at $HOME/.cache/boxmark"
+  mkdir -p $HOME/.cache/boxmark
+
+  ln -s $HOME/.cache/boxmark $HOME/.config/nnn/bookmarks
+  ln -s "$F" "$HOME/.cache/boxmark"
+  echo "created boxmark"
+else
+  ln -s "$F" "$HOME/.cache/boxmark"
+  echo "created boxmark"
+fi

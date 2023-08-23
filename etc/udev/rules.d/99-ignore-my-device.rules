@@ -1,0 +1,1 @@
+KERNELS=="input4", SUBSYSTEMS=="input", ATTRS{id/product}=="0001", ATTRS{id/vendor}=="0001", ATTRS{id/version}=="ab41", ENV{LIBINPUT_IGNORE_DEVICE}="1"

@@ -1,0 +1,190 @@
+{
+	"layer": "top",
+		"position": "top",
+		"height": 10,
+		"width": 1920,
+		"spacing": 2,
+		"modules-left": [
+			"sway/workspaces",
+		"sway/window",
+		"hyprland/workspaces"
+		],
+		"modules-center": [
+			"wlr/taskbar"
+		],
+		"modules-right": [
+			"pulseaudio",
+		"cpu",
+		"memory",
+		// "battery",
+		"battery#bat2",
+		"clock",
+		"tray"
+		],
+
+"hyprland/workspaces": {
+	"format": "{id}",
+	"format-icons": {
+		"1": "1",
+		"2": "2",
+		"3": "3",
+		"4": "4",
+		"5": "5",
+		"6": "6",
+		"7": "7",
+		"8": "8",
+		"9": "9",
+		"10": "10",
+		"active": "",
+		"default": ""
+	},
+},
+		"sway/workspaces": {
+			"disable-scroll": true,
+			"all-outputs": true,
+			//  "format": "{name}: {icon}",
+			"format": "{name}",
+			"format-icons": {
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+				"10": "0",
+				"urgent": "",
+				"focused": "",
+				"default": ""
+			}
+		},
+		"sway/mode": {
+			"format": "<span style=\"italic\">{}</span>",
+			"on-click": ""
+		},
+		"custom/launch": {
+			"format": "[]",
+			"on-click": "exec ~/.config/sway/script/bemenu_launch.sh ",
+			"on-click-right": "exec ~/.config/rofi/options.sh"
+		},
+		"tray": {
+			"spacing": 10
+		},
+		"clock": {
+			"timezone": "Asia/Kathmandu",
+			"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+			"format-alt": "{:%Y-%m-%d}"
+		},
+		"cpu": {
+			"format": "CPU {usage}%",
+			"tooltip": false,
+			"on-click": ""
+		},
+		"memory": {
+			"interval": 5,
+			"format": "MEM {used:0.1f}G",
+			"on-click": ""
+		},
+		"backlight": {
+			"device": "acpi_video1",
+			"format": "{percent}% {icon}",
+			"format-icons": [
+				"",
+			""
+			]
+		},
+		"battery": {
+			"states": {
+				"good": 95,
+				"warning": 30,
+				"critical": 15
+			},
+			"format": "BAT {capacity}%",
+			"format-charging": "BAT++ {capacity}%",
+			"format-plugged": "INIT bat {capacity}%",
+			"format-alt": "REM {time}",
+			"format-full": "FULL",
+			"format-icons": [
+				"",
+			"",
+			"",
+			"",
+			""
+			]
+		},
+		"battery#bat2": {
+			"bat": "BAT2"
+		},
+		"network": {
+			"format-wifi": "{essid} ({signalStrength}%) ",
+			"format-ethernet": "{ipaddr}/{cidr} ",
+			"tooltip-format": "{ifname} via {gwaddr} ",
+			"format-linked": "{ifname} (No IP) ",
+			"format-disconnected": "Disconnected ⚠",
+			"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		},
+		"pulseaudio": {
+			"scroll-step": 1,
+			"format": "{icon} {volume}%",
+			"format-muted": "Muted {format_source}",
+			"format-source-muted": "",
+			"format-icons": {
+				"headphone": "",
+				"hands-free": "",
+				"headset": "",
+				"phone": "",
+				"portable": "",
+				"car": "",
+				"default": [
+					"",
+				"",
+				""
+				]
+			},
+			"on-click": "pavucontrol"
+		},
+		"escape": true,
+		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+		"wlr/taskbar": {
+			"format": "{icon}",
+			"icon-size": 14,
+			"icon-theme": "Numix-Circle",
+			"tooltip-format": "{title}",
+			"on-click": "activate",
+			"on-click-middle": "close",
+			"ignore-list": [
+				"foot",
+				"kitty"
+			]
+		},
+		"hyprland/window": {
+			"format": "👉 {}",
+			"separate-outputs": true
+		},
+		"wlr/workspaces": {
+			"format": "{icon}",
+			"on-scroll-up": "hyprctl dispatch workspace e+1",
+			"on-scroll-down": "hyprctl dispatch workspace e-1",
+			"on-click": "activate",
+
+			"format": "{icon}",
+			"format-icons": {
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+				"10": "0",
+				"urgent": "",
+				"focused": "",
+				"default": ""
+				}
+			}
+		}
+}

@@ -1,0 +1,74 @@
+# helix --tutor to learn helix. Its actually pretty good
+
+# https://docs.helix-editor.com/keymap.html
+# https://docs.helix-editor.com/remapping.html
+
+# catppuccin_latte
+# nightfox
+# amberwood
+# catppuccin-mocha
+# rose_pine
+theme = "amberwood"
+
+[editor]
+line-number = "relative"
+cursorline = true
+rulers = [90]
+gutters = ["diff", "diagnostics", "spacer", "line-numbers", "spacer"]
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+left = ["mode", "file-name", "spinner"]
+center = []
+#right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "position", "file-type"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "C"
+
+[editor.lsp]
+auto-signature-help	= false
+[editor.smart-tab]
+enable = false
+
+[keys.normal]
+C-s = ":w"
+C-b = ["keep_primary_selection", "collapse_selection"]
+y = "yank_joined_to_clipboard"
+p = "paste_clipboard_after"
+X = "extend_line_up"
+D = "delete_char_forward"
+
+[keys.normal." "]
+q = ":buffer-close"
+" " = "buffer_picker"
+
+# [keys.normal."C-x"]
+# "C-f" = "file_picker"
+
+[keys.insert]
+C-l = "move_char_right"
+C-i = "normal_mode"
+C-s = "signature_help"
+
+[keys.select]
+C-i = ["normal_mode", "keep_primary_selection", "collapse_selection"]
+
+[keys.normal."+"]
+m = ":run-shell-command make"
+c = ":run-shell-command cargo build"
+t = [":run-shell-command zathura *.pdf", ":run-shell-command typst w *.typ"]
+w = [":run-shell-command zola serve", ":run-shell-command brave http://127.0.0.1:1111"]
+b = [":run-shell-command mdbook serve", ":run-shell-command brave 'http://localhost:3000'"]
+
+# Alt-o Alt-i increment lsp selection
+# Alt-n Alt-p next lsp selection

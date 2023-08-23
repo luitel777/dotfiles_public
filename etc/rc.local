@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# /etc/rc.local -- rc.local for Artix Linux
+#
+# Enter your custom commands here.
+echo 15000 > /sys/class/backlight/intel_backlight/brightness
+
+exit 0

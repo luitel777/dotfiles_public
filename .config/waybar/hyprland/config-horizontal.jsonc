@@ -1,0 +1,153 @@
+{
+	"layer": "top",
+	"position": "right",
+	"height": 768,
+	"width": 5,
+	"margin-right": 0,
+	"spacing": 10,
+	"modules-left": [
+		"wlr/taskbar"
+	],
+	"modules-center": [
+		"wlr/workspaces"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"cpu",
+		"memory",
+		"battery",
+		"battery#bat2",
+		"clock",
+		"tray"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+			//  "format": "{name}: {icon}",
+			"format": "{name}",
+			"format-icons": {
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+				"urgent": "",
+				"focused": "",
+				"default": ""
+			}
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>",
+		"on-click": ""
+	},
+	"custom/launch": {
+		"format": "[]",
+		"on-click": "exec ~/.config/sway/script/bemenu_launch.sh ",
+		"on-click-right": "exec ~/.config/rofi/options.sh"
+	},
+	"tray": {
+		"rotate": 270,
+		"spacing": 10
+	},
+	"clock": {
+		"timezone": "Asia/Kathmandu",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"cpu": {
+		"format": "CPU\n{usage}%",
+		"tooltip": false,
+		"on-click": ""
+	},
+	"memory": {
+		"interval": 5,
+		"format": " MEM\n {used:0.1f}G",
+		"on-click": ""
+	},
+	"backlight": {
+		"device": "acpi_video1",
+		"format": "{percent}% {icon}",
+		"format-icons": [
+			"",
+			""
+		]
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": " BAT\n {capacity}%",
+		"format-charging": "BAT++\n {capacity}%",
+		"format-plugged": "INIT\n {capacity}%",
+		"format-alt": " REM\n {time}",
+		"format-full": "FULL",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"network": {
+		"format-wifi": "{essid} ({signalStrength}%) ",
+		"format-ethernet": "{ipaddr}/{cidr} ",
+		"tooltip-format": "{ifname} via {gwaddr} ",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{icon}\n{volume}%",
+		"format-muted": "Muted\n{format_source}",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"escape": true,
+	"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 14,
+		"icon-theme": "Numix-Circle",
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": [
+			"foot",
+			"Alacritty"
+		]
+	},
+	"hyprland/window": {
+		"format": "👉 {}",
+		"separate-outputs": true
+	},
+	"wlr/workspaces": {
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"on-click": "activate"
+	}
+}

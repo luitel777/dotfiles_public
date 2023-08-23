@@ -1,0 +1,33 @@
+alias reload="exec $SHELL -l"
+alias ls="ls -C --color=auto"
+alias ip="ip --color=auto"
+alias batstat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "state\|percentage\|time to full\|time to empty"'
+alias wp="inxi -w"
+alias treelive="while \ clear \  tree \ sleep 3 \ do \ done"
+#alias clear="printf '\e[2J\e[H'"
+alias v="helix"
+alias ll="ls -l"
+alias cdd="cd -"
+alias oj="objdump"
+alias pp="ping gnu.org"
+alias ww="gammastep -O 3400k"
+alias rrr="xbacklight -set 1 && redshift -c ~/.config/redshift/redshift_hot.conf"
+alias www="gammastep -O 2400k"
+alias gd="godoc -http=localhost:8000"
+alias sysinfo="inxi -Fxz"
+alias wm_class='xprop | grep "WM_CLASS"'
+alias tt="btop"
+alias reboot="reboot"
+alias zathura="zathura --fork"
+alias pkg="pkg-config --cflags --libs "
+alias py="python"
+alias weather='curl https://wttr.in/kathmandu'
+alias cp="cp -iv"
+alias copy="rsync -avzhP"
+alias yeet='yay -Rsn'
+alias cputemp='watch -n 2 sensors'
+alias dc=cd
+alias sync_knowledge="rclone sync ~/Knowledge personal:Lenivyy/Knowledge -P" 
+alias rweb="rclone rcd --rc-web-gui"
+alias m="make"
+alias gf2="~/Src/software/gf/gf2"

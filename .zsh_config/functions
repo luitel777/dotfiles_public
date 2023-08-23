@@ -1,0 +1,52 @@
+#!/bin/sh
+
+yt_dlp_music () {
+  yt-dlp --extract-audio --audio-format vorbis "$1"
+}
+
+yt_dlp_videos(){
+  yt-dlp --embed-subs "-f bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" "$1"
+}
+
+syslimit () {
+  systemd-run --user --scope -p MemoryMax=500M "$1"
+}
+
+manpdf() {
+  man -Tpdf "$1" > "$1"
+}
+
+dtime() {
+  uptime | perl -naE 'say+8,"="x$F[2],D'
+}
+
+how_much_have_I_consoomed_today(){
+ vnstat | grep "estimated" | sed '2q;d'
+}
+
+music(){
+	spotdl "$1" --output-format ogg
+}
+
+wifi(){
+	c=$(nmcli networking connectivity)
+	if [[ $c  == "full" ]]; then
+		nmcli networking off
+	else
+		nmcli networking on
+	fi
+}
+
+# FZF aliases
+fm(){
+	man $(apropos "$1" | fzf | awk '{print $1;}') 
+}
+
+#https://github.com/flatpak/flatpak/issues/1224#issuecomment-348665064
+flatpaki(){
+		flatpak --installation=extra install $1
+}
+
+zf(){
+	zathura $(fzf)
+}

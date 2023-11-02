@@ -20,7 +20,7 @@ if [ -n "$1" ]; then
                 read -r _
             fi
         else
-            cp "$1" "/home/owl/.config/sway/wallpapers/default.jpg" && swaybg --image "$1" --mode fill &
+            cp "$1" "/home/owl/.config/hypr/wallpapers/default.jpg" && swaybg --image "$1" --mode fill &
             # if type swww >/dev/null 2>&1; then
             #     swww img "$1"
             # else

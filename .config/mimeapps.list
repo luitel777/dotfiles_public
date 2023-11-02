@@ -1,8 +1,8 @@
 [Default Applications]
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/pdf=sioyek.desktop
 image/jpeg=imv.desktop
 image/png=imv.desktop
-application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+application/epub+zip=sioyek.desktop
 x-scheme-handler/http=brave-browser.desktop
 x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/chrome=brave-browser.desktop
@@ -13,12 +13,16 @@ application/x-extension-shtml=brave-browser.desktop
 application/xhtml+xml=brave-browser.desktop
 application/x-extension-xhtml=brave-browser.desktop
 application/x-extension-xht=brave-browser.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-46KWA2.desktop
+message/rfc822=userapp-Thunderbird-46KWA2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-46KWA2.desktop
 
 [Added Associations]
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;sioyek.desktop;brave-browser.desktop;
 image/jpeg=imv.desktop;
 image/png=imv.desktop;
-application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;sioyek.desktop;mupdf.desktop;
 x-scheme-handler/http=brave-browser.desktop;
 x-scheme-handler/https=brave-browser.desktop;
 x-scheme-handler/chrome=brave-browser.desktop;
@@ -29,3 +33,5 @@ application/x-extension-shtml=brave-browser.desktop;
 application/xhtml+xml=brave-browser.desktop;
 application/x-extension-xhtml=brave-browser.desktop;
 application/x-extension-xht=brave-browser.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-46KWA2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-46KWA2.desktop;

@@ -22,20 +22,6 @@ name = "nasm"
 indent = { tab-width = 8, unit = "        " }
 
 [[language]]
-name = "typst"
-scope = "source.typst"
-injection-regex = "^typ(st)?$"
-file-types = ["typ"]
-comment-token = "//"
-roots = []
-language-servers = ["typst-lsp"]
-indent = { tab-width = 4, unit = "    "}
-
-[language-server]
-typst-lsp = { command = "typst-lsp", args = [] }
-clangd = { args = ["--header-insertion=never"]}
-
-[[language]]
 name = "make"
 scope = "source.make"
 file-types = ["Makefile", "makefile", "make", "mk", "GNUmakefile"]

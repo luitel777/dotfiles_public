@@ -8,19 +8,20 @@
 # amberwood
 # catppuccin-mocha
 # rose_pine
-theme = "amberwood"
+# night_owl_modified
+theme = "rose_pine"
 
 [editor]
 line-number = "relative"
 cursorline = true
 rulers = [90]
-gutters = ["diff", "diagnostics", "spacer", "line-numbers", "spacer"]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
 color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
-normal = "block"
 select = "underline"
+normal = "block"
 
 [editor.soft-wrap]
 enable = true
@@ -67,8 +68,11 @@ C-i = ["normal_mode", "keep_primary_selection", "collapse_selection"]
 m = ":run-shell-command make"
 c = ":run-shell-command cargo build"
 t = [":run-shell-command zathura *.pdf", ":run-shell-command typst w *.typ"]
-w = [":run-shell-command zola serve", ":run-shell-command brave http://127.0.0.1:1111"]
-b = [":run-shell-command mdbook serve", ":run-shell-command brave 'http://localhost:3000'"]
+z = [":run-shell-command zola serve", ":run-shell-command brave http://127.0.0.1:1111"]
+b = ":run-shell-command bun run dev"
+g = ":sh ./gradlew build"
+r = ":config-reload"
+
 
 # Alt-o Alt-i increment lsp selection
 # Alt-n Alt-p next lsp selection

@@ -1,3 +1,3 @@
 !#/bin/sh
 
-mdbook serve ~/Src/luitel777/lambda &
+# mdbook serve ~/Src/luitel777/lambda &

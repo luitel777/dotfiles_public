@@ -1,3 +1,15 @@
 #!/bin/sh
 
-bemenu-run --list 20 --fn "Iosevka_SPW" --center --ignorecase --hf "#ffffff" -B 2  --hb "#4c4f69" --tf "#d20f39" --bdr "#8839ef" -M 500 -H 25 --prompt "§" --scrollbar always
+SELECTION_TEXT="#000000"
+SELECTION_BG="#ffffff"
+TITLE_FG="#ffffff"
+BG="#000000"
+SCROLLBAR="#3cd42f"
+
+bemenu-run \
+ --list 20 --fn "Iosevka Term" --center --ignorecase \
+ --hf $SELECTION_TEXT --hb $SELECTION_BG \
+ --nb $BG --ab $BG --tb $BG --fbb $BG --fb $BG --sb $BG \
+ --scf $SCROLLBAR --scb $BG \
+ --tf $TITLE_FG \
+ -M 700 -H 25 --prompt "§" --scrollbar always

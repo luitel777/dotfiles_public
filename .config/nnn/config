@@ -1,6 +1,12 @@
-# requires vidir or qmv for renamer
-# tabbed for preview-tabbed // its a suckelss tool //
-[ -f ~/.config/nnn/quitcd.bash_zsh ] && source ~/.config/nnn/quitcd.bash_zsh
+# this thing is not compatible with bash so we have to source manually
+# if [ "$SHELL" = "/usr/bin/fish" ]
+	# source ~/.config/nnn/quitcd.fish
+# else
+	# source ~/.config/nnn/quitcd.bash_zsh
+# end
+
+source ~/.config/nnn/quitcd.fish
+
 export NNN_PLUG='b:bulknew;c:cdpath;g:getplugs;i:imgur;l:launch;m:boxmark;v:imgview;p:preview-tui;r:renamer;w:wallpaper;s:pskill;z:preview-tabbed'
 export NNN_FIFO=/tmp/nnn.fifo
-export TERMINAL='foot'
+export TERMINAL='tmux'

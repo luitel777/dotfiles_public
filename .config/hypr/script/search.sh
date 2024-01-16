@@ -1,5 +1,5 @@
 #!/bin/sh
-query=$(echo "" | bemenu -c --prompt "search" --fn "Iosevka_SPW 20" -M 40 )
+query=$(echo "" | bemenu -c --prompt "search ⌕   " --fn "Iosevka Term 40" -M 40 --tf "#f3fa37")
 BROWSER=brave
 
 if [ -z "$query" ]
@@ -7,7 +7,7 @@ then echo "No args"
 	exit 1
 fi
 
-arguments=$(printf "%s\n" "aur" "google" "github" "ddg" "unix stack" "stack overflow" "youtube" "books" | bemenu --fn "Iosevka SS11 20"  --list 10 -b --prompt "search" -c -M 500)
+arguments=$(printf "%s\n" "aur" "google" "github" "ddg" "unix stack" "stack overflow" "youtube" "books" | bemenu --fn "Iosevka Term 20"  --list 10 -b --prompt "⌕" --tf "#f3fa37" --hf "#000000" --hb "#ffffff" -c -M 500)
 
 if [ "$arguments" = "github" ]
 then

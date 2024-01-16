@@ -36,6 +36,7 @@ then
 elif [ "$arguments" = "books" ]
 then
 	$BROWSER "https://annas-archive.org/search?q=$query"
+	# $BROWSER "http://libgen.rs/search.php?req=$query&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def"
 
 elif [ "$arguments" = "aur" ]
 then

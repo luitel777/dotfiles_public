@@ -10,7 +10,7 @@
 + Editor             - [Helix](https://helix-editor.com/)
 + Notification       - [Mako](https://github.com/emersion/mako)
 + Media player       - [Mpv](https://mpv.io/)
-+ Pdf                - [Sioyek](https://github.com/ahrm/sioyek)
++ Pdf                - [Zathura](https://pwmt.org/projects/zathura/)
 + Other things I might never use but its there incase anything goes wrong.
 
 

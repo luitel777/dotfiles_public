@@ -6,17 +6,18 @@
 # catppuccin_latte
 # nightfox
 # amberwood
-# catppuccin-mocha
+# catppuccin_mocha
 # rose_pine
 # night_owl_modified
-theme = "rose_pine"
+theme = "ayu_dark"
 
 [editor]
 line-number = "relative"
 cursorline = true
 rulers = [90]
-gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 color-modes = true
+bufferline = "always"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -37,42 +38,44 @@ mode.insert = "I"
 mode.select = "C"
 
 [editor.lsp]
-auto-signature-help	= false
+# auto-signature-help	= false
 [editor.smart-tab]
 enable = false
 
 [keys.normal]
 C-s = ":w"
 C-b = ["keep_primary_selection", "collapse_selection"]
-y = "yank_joined_to_clipboard"
-p = "paste_clipboard_after"
 X = "extend_line_up"
 D = "delete_char_forward"
+"tab" = ":buffer-next"
+"S-tab" = ":buffer-previous"
 
 [keys.normal." "]
 q = ":buffer-close"
 " " = "buffer_picker"
+o = "file_picker_in_current_buffer_directory"
 
 # [keys.normal."C-x"]
 # "C-f" = "file_picker"
 
 [keys.insert]
 C-l = "move_char_right"
-C-i = "normal_mode"
+"C-;" = "normal_mode"
 C-s = "signature_help"
 
 [keys.select]
-C-i = ["normal_mode", "keep_primary_selection", "collapse_selection"]
+"C-;" = ["normal_mode", "keep_primary_selection", "collapse_selection"]
 
 [keys.normal."+"]
-m = ":run-shell-command make"
-c = ":run-shell-command cargo build"
-t = [":run-shell-command zathura *.pdf", ":run-shell-command typst w *.typ"]
-z = [":run-shell-command zola serve", ":run-shell-command brave http://127.0.0.1:1111"]
-b = ":run-shell-command bun run dev"
-g = ":sh ./gradlew build"
-r = ":config-reload"
+f = ":pipe fmt --width=80"
+# sh = run-shell-commnd
+c = ":sh cargo build"
+t = [":sh zathura *.pdf", ":sh typst w *.typ"]
+z = [":sh zola serve", ":sh brave http://127.0.0.1:1111"]
+g = [":sh ./gradlew -t :bootjar", ":sh ./gradlew bootrun"]
+s = [":sh ./gradlew -t :bootjar", ":sh ./gradlew bootrun"]
 
 
 # Alt-o Alt-i increment lsp selection
 # Alt-n Alt-p next lsp selection
+# "% copies the buffer name

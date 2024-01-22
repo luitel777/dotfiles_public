@@ -1,0 +1,5 @@
+@define-color base            #000000;
+@define-color text            #ffffff;
+@define-color urgent          #ff0000;
+@define-color hover           #00ff00;
+@define-color inactive        #8787ed;

@@ -1,0 +1,155 @@
+/* Original config taken from https://github.com/DankChoir/dotfiles, modified by George-Markas. */
+
+/* Importing rose pine colors */
+@import "./plain.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Iosevka Term";
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(255, 255, 255, 0);
+  color: @text;
+}
+
+tooltip {
+  background: @base;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @base;
+}
+
+#workspaces button {
+  padding: 1px;
+  color: @inactive;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.focused {
+  color: @text;
+  background: @base;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: @base;
+  background: @text;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: @hover;
+  color: @base;
+  border-radius: 10px;
+}
+
+#window,
+#clock,
+#battery,
+#cpu,
+#pulseaudio,
+#network,
+#temperature,
+#workspaces,
+#tray,
+#memory,
+
+#backlight {
+  background: @base;
+  opacity: 1;
+  padding: 0px 6px;
+  margin: 5px 0px;
+  margin-top: 5px;
+  border: 2px solid @base;
+}
+
+#memory {
+  color: @text;
+  border-radius: 10px;
+  margin-left: 7px;
+}
+
+#cpu {
+  color: @text;
+  border-radius: 10px;
+  margin-left: 7px;
+}
+
+#temperature {
+  color: @text;
+  border-radius: 10px;
+  margin-left: 7px;
+}
+
+#temperature.critical {
+  color: @text;
+}
+
+#backlight {
+  color: @text;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 7px;
+}
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#workspaces {
+  background: @base;
+  border-radius: 10px;
+  margin-left: 7px;
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#window {
+  border-radius: 10px;
+}
+
+window#waybar.empty #window {  
+ background: none;
+ border: none;
+}  
+
+#clock {
+  color: @text;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#network {
+  color: @text;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#pulseaudio {
+  color: @text;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#battery {
+  color: @text;
+  border-radius: 10px;
+  margin-right: 7px;
+}

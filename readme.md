@@ -1,6 +1,4 @@
 * Dotfiles
-![](./assets/rice_01.png)
-![](./assets/rice_02.png)
 + Linux              - [Arch](https://archlinux.org/)
 + Wayland Compositor - [Hyprland](https://aur.archlinux.org/packages/waybar-hyprland-git)
 + Font               - [Iosevka](https://github.com/be5invis/Iosevka)

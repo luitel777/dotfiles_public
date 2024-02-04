@@ -1,4 +1,5 @@
-* Dotfiles
+# Dotfiles
+Must have programs\n
 + Linux              - [Arch](https://archlinux.org/)
 + Wayland Compositor - [Hyprland](https://aur.archlinux.org/packages/waybar-hyprland-git)
 + Font               - [Iosevka](https://github.com/be5invis/Iosevka)
@@ -9,6 +10,7 @@
 + Notification       - [Mako](https://github.com/emersion/mako)
 + Media player       - [Mpv](https://mpv.io/)
 + Pdf                - [Zathura](https://pwmt.org/projects/zathura/)
++ Tmux               - [Tmux](https://github.com/tmux/tmux)
 + Other things I might never use but its there incase anything goes wrong.
 
 
@@ -19,9 +21,18 @@ Caps <-> Ctrl
 
 main keybinds
 ```
-SUPER+S+Ret - bemenu
-M+RET       - foot
+SUPER+S+Ret     - bemenu
+Super+RET       - foot + tmux
+M+Ret           - foot
+Super+d         - search prompt
+Super+s         - docs prompt
+Super+x         - shutdown/logout prompt
+Super+c         - toggle waybar
+Super+M         - monochrome mode
+Super+[ / ]     - switch workspace
 ```
+
+Meta is the primary key in tmux. Most of the keybinds is untouched in tmux.
 
 aliases
 ```

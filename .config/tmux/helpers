@@ -1,0 +1,25 @@
+#!/bin/sh
+
+commands="popup\nchoose-tree\nlast-window\nneww\nrun-shell\nlist-clients\nmusic"
+
+tmux_width=$(tmux display-message -p "#{window_width}")
+tmux_height=$(tmux display-message -p "#{window_height}")
+a=$(echo -en $commands | fzf-tmux -x $(($tmux_width/2)) -y $(($tmux_height)) -h 40%)
+
+if [ "$a" = "" ]; then
+    exit
+fi
+
+if [ "$a" = "run-shell" ]; then
+    # Ask the user for input
+    read -p "Enter a command for run-shell: " b
+
+    # Execute tmux command with user input
+    tmux $a "$b"
+    echo "OK"
+elif [ "$a" = "music" ]; then
+    tmux run-shell "mpv --shuffle --no-video --no-resume-playback ~/Music"
+else
+    # Execute tmux command without user input for other cases
+    tmux $a
+fi

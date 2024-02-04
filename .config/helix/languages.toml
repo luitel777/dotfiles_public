@@ -6,22 +6,6 @@
 # if you need more than 3 levels of indentation, you’re screwed anyway, and should fix your program. 
 
 [[language]]
-name = "cpp"
-indent = { tab-width = 2, unit = "  " }
-auto-format = false
-file-types = ["cc", "hh", "c++", "cpp", "hpp", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino", "cu", "cuh", "cppm"]
-
-[[language]]
-name = "c"
-indent = { tab-width = 8, unit = "        " }
-auto-format = false
-file-types = ["h", "C", "H", "c"]
-
-[[language]]
-name = "nasm"
-indent = { tab-width = 8, unit = "        " }
-
-[[language]]
 name = "make"
 scope = "source.make"
 file-types = ["Makefile", "makefile", "make", "mk", "GNUmakefile"]

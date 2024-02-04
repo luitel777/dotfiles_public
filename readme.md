@@ -11,6 +11,7 @@ Must have programs\n
 + Media player       - [Mpv](https://mpv.io/)
 + Pdf                - [Zathura](https://pwmt.org/projects/zathura/)
 + Tmux               - [Tmux](https://github.com/tmux/tmux)
++ Font               - Iosevka SS11 and IBM Plex
 + Other things I might never use but its there incase anything goes wrong.
 
 
@@ -32,7 +33,7 @@ Super+M         - monochrome mode
 Super+[ / ]     - switch workspace
 ```
 
-Meta is the primary key in tmux. Most of the keybinds is untouched in tmux.
+M-x is the primary key in tmux. Most of the keybinds is untouched in tmux.
 
 aliases
 ```

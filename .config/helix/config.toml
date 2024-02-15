@@ -1,114 +1,85 @@
-# Author : Joe Mckay joemckay3006@gmail.com
-# Palette from https://github.com/haishanh/night-owl.vim
+# helix --tutor to learn helix. Its actually pretty good
 
-'warning' = { fg = 'peach', modifiers = ['dim'] }
-'error' = { fg = 'red', modifiers = ['dim'] }
-'info' = { fg = 'blue', modifiers = ['dim'] }
-'hint' = { fg = 'paleblue', modifiers = ['dim'] }
+# https://docs.helix-editor.com/keymap.html
+# https://docs.helix-editor.com/remapping.html
 
-"diagnostic.warning" = { underline = { color = "peach", style = "curl" } }
-"diagnostic.error" = { underline = { color = "red", style = "curl" } }
-"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "paleblue", style = "curl" } }
+# catppuccin_latte
+# nightfox
+# amberwood
+# catppuccin_mocha
+# rose_pine
+# night_owl_modified
+theme = "ayu_evolve"
 
-# UI
-'ui.background' = { fg = 'foreground', bg = 'background' }
-'ui.window' = { fg = 'grey7' }
-'ui.gutter' = { bg = 'background' } # formerly grey 2
-'ui.text' = { fg = 'foreground' }
-'ui.text.focus' = { fg = 'foreground' }
-'ui.text.info' = { fg = 'foreground'}
-'ui.cursor' = { fg = 'background', bg = 'blue' }
-'ui.cursor.primary' = { fg = 'background', bg = 'gold' }
-'ui.cursor.match' = { bg = 'selection', modifiers = ['underlined'] }
-'ui.selection' = { bg = 'selection', modifiers = ['dim'] }
-'ui.linenr' = { fg = 'grey4', bg = 'background' } # formerly background2
-'ui.linenr.selected' = { fg = 'greyE', bg = 'background2'  }
-'ui.statusline' = { fg = 'greyE', bg = 'background2' }
-'ui.statusline.inactive' = { fg = 'grey7', bg = 'background2' }
-'ui.statusline.normal' = { bg = 'slate' }
-'ui.statusline.insert' = { bg = 'peach' }
-'ui.statusline.select' = { bg = 'green' }
-'ui.menu' = { fg = 'foreground', bg = 'selection' }
-'ui.menu.selected' = { fg = 'foreground', bg = 'pink' }
-'ui.popup' = { fg = 'foreground', bg = 'background2' }
-'ui.popup.info' = { fg = 'gold', bg = 'background2'}
-'ui.help' = { fg = 'gold', bg = 'background2'}
-'ui.virtual.ruler' = { bg = 'grey4' }
-'ui.virtual.whitespace' = { fg = 'grey4' }
-'ui.cursorline.primary' = { bg = 'background2' }
+[editor]
+line-number = "relative"
+cursorline = true
+rulers = [90]
+true-color = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+color-modes = true
+bufferline = "always"
 
-# SYNTAX
-'type' = { fg = 'green' }
-'constructor' = { fg = 'blue' }
-'constant' = { fg = 'foreground' }
-'constant.builtin' = { fg = 'paleblue' }
-'constant.character.escape' = { fg = 'peach' }
-'string' = { fg = 'gold' }
-'string.regexp' = { fg = 'green' }
-'string.special.url' = { fg = 'gold', modifiers = ['underlined'] }
-'comment' = { fg = 'slate', modifiers = ['italic'] }
-'comment.block.documentation' = { fg = 'slate' }
-'variable' = { fg = 'green' }
-'variable.builtin' = { fg = 'green', modifiers = ['italic'] }
-'label' = { fg = 'foreground' }
-'punctuation' = { fg = 'foreground' }
-'punctuation.special' = { fg = 'pink' }
-'keyword' = { fg = 'pink' }
-'keyword.control.import' = { fg = 'green', modifiers = ['italic'] }
-'keyword.control.return' = { fg = 'pink', modifiers = ['italic'] }
-'keyword.control.exception' = { fg = 'red' }
-'operator' = { fg = 'pink' }
-'function' = { fg = 'blue' }
-'function.macro' = { fg = 'peach' }
-'function.special' = { fg = 'pink' }
-'tag' = { fg = 'blue' }
-'namespace' = { fg = 'peach' }
-'special' = { fg = 'greyE' }
-'module' = { fg = 'greyE' }
-'attribute' = { fg = 'paleblue' }
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+normal = "block"
 
-# MARKUP
-'markup.heading' = { fg = 'blue', modifiers = ['bold'] }
-'markup.heading.marker' = { fg = 'grey4', modifiers = ['dim'] }
-'markup.heading.1' = { fg = 'blue', modifiers = ['bold'] }
-'markup.heading.2' = { fg = 'paleblue', modifiers = ['bold']  }
-'markup.heading.3' = { fg = 'green', modifiers = ['bold'] }
-'markup.heading.4' = { fg = 'pink', modifiers = ['bold'] }
-'markup.heading.5' = { fg = 'peach', modifiers = ['bold'] }
-'markup.heading.6' = { fg = 'slate', modifiers = ['bold'] }
-'markup.list' = { fg = 'pink' }
-'markup.bold' = { fg = 'foreground', modifiers = ['bold'] }
-'markup.italic' = { fg = 'foreground', modifiers = ['italic'] }
-'markup.strikethrough' = { fg = 'foreground', modifiers = ['crossed_out'] }
-'markup.link' = { fg = 'pink', modifiers = ['underlined'] }
-'markup.link.url' = { fg = 'slate', modifiers = ['underlined'] }
-'markup.quote' = { fg = 'green', modifiers = ['italic'] }
-'markup.raw' = { fg = 'gold', bg = 'background2' }
+[editor.soft-wrap]
+enable = true
 
-# DIFF
-'diff.plus' = { fg = 'green' }
-'diff.minus' = { fg = 'red' }
-'diff.delta' = { fg = 'blue' }
-'diff.delta.moved' = { fg = 'blue', modifiers = ['italic'] }
+[editor.statusline]
+left = ["mode", "file-name", "spinner"]
+center = []
+#right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "position", "file-type"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "C"
 
-[palette]
-background = '#011627'
-background2 = '#112630'
-foreground = '#d6deeb'
-selection = '#2d2c5d'
+[editor.lsp]
+# auto-signature-help	= false
+[editor.smart-tab]
+enable = false
 
-slate = '#637777'
-red = '#ff5874'
-peach = '#f78c6c'
-gold = '#ecc48d'
-pink = '#c792ea'
-green = '#addb67'
-blue = '#82aaff'
-paleblue = '#7fdbca'
+[keys.normal]
+C-s = ":w"
+C-b = ["keep_primary_selection", "collapse_selection"]
+X = "extend_line_up"
+D = "delete_char_forward"
+"tab" = ":buffer-next"
+"S-tab" = ":buffer-previous"
 
-# Greys are named after their value.
-grey2 = '#222222'
-grey4 = '#444444'
-grey7 = '#777777'
-greyE = '#eeeeee'
+[keys.normal." "]
+q = ":buffer-close"
+" " = "buffer_picker"
+o = "file_picker_in_current_buffer_directory"
+
+# [keys.normal."C-x"]
+# "C-f" = "file_picker"
+
+[keys.insert]
+C-l = "move_char_right"
+"C-[" = "normal_mode"
+C-s = "signature_help"
+
+[keys.select]
+"C-[" = ["normal_mode", "keep_primary_selection", "collapse_selection"]
+
+[keys.normal."+"]
+f = ":pipe fmt --width=80"
+# m = ":pipe-to ~/.config/tmux/tman"
+m = ["yank_to_clipboard", ":sh man `wl-paste`"]
+# sh = run-shell-commnd
+c = ":sh cargo build"
+t = [":sh zathura *.pdf", ":sh typst w *.typ"]
+z = [":sh zola serve", ":sh brave http://127.0.0.1:1111"]
+g = [":sh ./gradlew -t :bootjar", ":sh ./gradlew bootrun"]
+s = [":sh ./gradlew -t :bootjar", ":sh ./gradlew bootrun"]
+
+
+# Alt-o Alt-i increment lsp selection
+# Alt-n Alt-p next lsp selection
+# "% copies the buffer name
+# tmux run-shell make

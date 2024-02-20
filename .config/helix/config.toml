@@ -9,21 +9,22 @@
 # catppuccin_mocha
 # rose_pine
 # night_owl_modified
-theme = "ayu_evolve"
+theme = "base16_transparent"
 
 [editor]
 line-number = "relative"
 cursorline = true
 rulers = [90]
 true-color = true
-gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 color-modes = true
 bufferline = "always"
+idle-timeout=0
 
 [editor.cursor-shape]
-insert = "bar"
-select = "underline"
-normal = "block"
+# insert = "bar"
+# select = "underline"
+# normal = "block"
 
 [editor.soft-wrap]
 enable = true

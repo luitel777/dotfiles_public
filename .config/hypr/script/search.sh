@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
 query=$(echo "" | bemenu -c --prompt "search ⌕   " --fn "Iosevka Term 40" -M 40 --tf "#f3fa37")
 BROWSER=brave
 

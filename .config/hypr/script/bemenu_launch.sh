@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 SELECTION_TEXT="#000000"
 SELECTION_BG="#ffffff"
@@ -7,7 +7,7 @@ BG="#000000"
 SCROLLBAR="#3cd42f"
 
 bemenu-run \
- --list 20 --fn "Iosevka Term" --center --ignorecase \
+ --list 20 --fn "Iosevka SS11" --center --ignorecase \
  --hf $SELECTION_TEXT --hb $SELECTION_BG \
  --nb $BG --ab $BG --tb $BG --fbb $BG --fb $BG --sb $BG \
  --scf $SCROLLBAR --scb $BG \

@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
 query=$(printf "%s\n" "rustdoc" "devdocs" | bemenu --list 10 -c --prompt "system" --ignorecase -M 600 --fn "Iosevka Term 30" --prompt "docs" --tf "#00ff00" --hf "#000000" --hb "#ffffff")
 if [ "$query" = "rustdoc" ];
 then 
